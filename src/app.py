@@ -10,7 +10,7 @@ os.environ["TOKENIZERS_PARALLELISM"] = "false"
 
 # Instantiate language model and specify data directory
 llm = get_hf_llm(temperature=0.9)
-genai_docs = "./data_source/generative_ai"
+genai_docs = r"C:\ALL\AI\PROJECT\rag_langchain\data_source\generative_ai"
 
 # Build RAG chain
 genai_chain = build_rag_chain(llm, data_dir=genai_docs, data_type="pdf")

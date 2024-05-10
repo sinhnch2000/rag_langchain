@@ -64,7 +64,7 @@ class TextSplitter:
 class Loader:
     def __init__(self,
                  file_type: str = Literal["pdf"],
-                 split_kwargs: dict = {"chunk_size": 300, "chunk_overlap": 0}
+                 split_kwargs: dict = {"chunk_size": 1000, "chunk_overlap": 0}
                  ) -> None:
         assert file_type in ["pdf"], "file_type must be pdf"
         self.file_type = file_type
@@ -88,3 +88,4 @@ class Loader:
         else:
             raise ValueError("file_type must be pdf")
         return self.load(files, workers=workers)
+
